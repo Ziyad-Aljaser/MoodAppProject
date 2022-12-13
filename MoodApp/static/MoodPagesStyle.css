@@ -1,0 +1,102 @@
+body {
+    padding: 20px;
+    background-image: url("MoodPagesBackground.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    }
+
+b {
+    font-family: Comic Sans MS, sans-serif;
+    font-size: 25px;
+}
+
+button {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 49.86%;
+    padding: 25px;
+    background-color: rgba(238, 236, 69, 0.5);
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    text-align: center;
+}
+
+.container {
+    width: 1200px;
+    height: 480px;
+    padding: 30px;
+    display: flex;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+div {
+    font-family: Comic Sans MS, sans-serif;
+    font-size: 25px;
+}
+
+div.author {
+    background-color: rgba(220, 210, 82, 0.5);
+    width: 300px;
+    height: 50px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    right: 150px;
+    top:415px;
+}
+
+div.phrase {
+    background-color: rgba(220, 210, 82, 0.5);
+    width: 500px;
+    height: 420px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    padding: 20px;
+    position:fixed;
+    left: 430px;
+    top: 55px;
+}
+
+div.picture {
+    background-color: rgb(0, 0, 0);
+    width: 250px;
+    height: 290px;
+    border: 6px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 200px;
+    top:70px;
+}
+
+div.AI_Image {
+    background-color: rgb(0, 0, 0);
+    width: 250px;
+    height: 300px;
+    border: 6px solid rgb(0, 0, 0);
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    left: 110px;
+    top:150px;
+}
+
+div.AI_Text {
+    background-color: rgba(220, 210, 82, 0.5);
+    width: 250px;
+    height: 40px;
+    border: 5px solid rgb(0, 0, 0);
+    display: flex;
+    border-radius: .5em;
+    justify-content: center;
+    position:fixed;
+    top:60px;
+    left: 110px;
+}

@@ -1,0 +1,138 @@
+body {
+    padding: 20px;
+    font-family: Comic Sans MS, sans-serif;
+    background-image: url("MainBackground.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+p{
+    font-size: 25px;
+}
+
+h1{
+   text-align: center;
+}
+
+.container {
+    background-color: rgba(111, 41, 78, 0.5);
+    width: 900px;
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    padding: 30px;
+    display: flex;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+/* Used to style the modes' buttons */
+.button {
+    cursor: pointer;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(172, 248, 240, 0.3);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    text-align: center;
+    position: relative;
+    }
+
+/*Used to format the creators box*/
+b {
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    font-family: Comic Sans MS, sans-serif;
+}
+
+
+.button:active {
+    background-color: rgba(172, 248, 240, 0.3);
+}
+
+.button__text {
+    font: bold 20px "Quicksand", san-serif;
+    transition: all 0.2s;
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    font-family: Comic Sans MS, sans-serif;
+}
+
+.button--loading .button__text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Used to style the flip-box */
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+.flip-box-inner {
+    margin-top: 25%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-box-front {
+    cursor: pointer;
+    padding: 25px;
+    background-color: rgba(172, 248, 240, 0.3);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    line-height: 150px;
+    text-align: center;
+    vertical-align: middle;
+}
+.flip-box-back {
+    cursor: pointer;
+    padding: 25px;
+    background-color: rgba(172, 248, 240, 0.3);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: .5em;
+    text-align: center;
+    transform: rotateY(180deg);
+}

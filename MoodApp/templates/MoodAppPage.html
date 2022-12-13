@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <link rel="stylesheet" href="{% static 'MoodAppStyle.css' %}">
+    <head>
+        <meta charset="UTF-8">
+        <title>What is Your Mood?</title>
+    </head>
+    <body>
+    <h1>Welcome to "What is Your Mood?" App</h1>
+        <p>Please choose your mood from the list:</p>
+
+        <!-- Here is the list of the moods -->
+        <!-- Used to create the modes' buttons -->
+        <div class="container">
+            <button class= "button" onclick="location.href='/happy/'; this.classList.toggle('button--loading')">
+                <span class="button__text">Happy &#128516</span>
+            </button>
+
+            <button class= "button" onclick="location.href='/sad/'; this.classList.toggle('button--loading')">
+                <span class="button__text">Sad &#128577</span>
+            </button>
+
+            <button class= "button" onclick="location.href='/angry/'; this.classList.toggle('button--loading')">
+                <span class="button__text">Angry &#128545</span>
+            </button>
+
+            <button class= "button" onclick="location.href='/nervous/'; this.classList.toggle('button--loading')">
+                <span class="button__text">Nervous &#128534</span>
+            </button>
+        </div>
+
+        <!-- Used to create the creators flip-box -->
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <b>The Developers</b>
+                </div>
+                    <div class="flip-box-back">
+                    <h3>Ziyad Aljaser</h3>
+                    <h3>Fahad Altamimi</h3>
+                    <h3>Ammar Alsehli</h3>
+                    <h3>Ahmed Alsleem</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="{% static 'ButtonsSound.js' %}"></script>
+</html>

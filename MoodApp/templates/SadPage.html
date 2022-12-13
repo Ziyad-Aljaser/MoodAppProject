@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+    <link rel="stylesheet" href="{% static 'MoodPagesStyle.css' %}">
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Sad Page</title>
+    </head>
+
+    <body>
+
+        <!-- Connect the database with HTML and send it to JS-->
+        <script type="text/javascript">
+            const Id = [];
+            const Author = [];
+            const Phrase = [];
+            const AuthorPic = [];
+            {% for i in myDataBase %}
+                Id.push({{i.0}});
+                Author.push('{{i.1}}');
+                Phrase.push('{{i.2}}');
+                AuthorPic.push('{{i.3}}');
+            {% endfor %}
+        </script>
+
+        <div class="container">
+            <div class="AI_Text">AI Image Generator</div>
+            <div class="AI_Image"><img src='{{get_AI_image}}' style="border-radius: 40%; width: 250px;" alt=""></div>
+            <div class="phrase" id="p"></div>
+            <div class="author" id="a"></div>
+            <div class="picture" id="pic"></div>
+        </div>
+
+        <!-- Used to generate random phrases and refresh the page-->
+        <button id="bn"><b>See Another Phrase</b></button>
+
+        <button class= "button" onclick="history.back()"><b>Go Back</b></button>
+
+    </body>
+        <script src="{% static 'MoodPagesScript.js' %}"></script>
+        <script src="{% static 'ButtonsSound.js' %}"></script>
+</html>
