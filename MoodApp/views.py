@@ -14,7 +14,7 @@ def configure():
 # Used to generate the random AI image based on the user mood
 def get_AI_image(mode):
     # Used to get the hidden API Key
-    openai.api_key_path = "MoodApp/.env"  # api key
+    openai.api_key_path = ".env"  # api key
     test = openai.Image.create(prompt=mode, n=1, size="1024x1024")
     url = str(test["data"][0])[12:-3]
     return url
