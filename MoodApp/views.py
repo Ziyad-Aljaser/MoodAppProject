@@ -9,8 +9,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 
-dotenv_path = Path('venv/.env')
-load_dotenv(dotenv_path=dotenv_path)
+load_dotenv()
 
 # Used to generate the random AI image based on the user mood
 def get_AI_image(mode):
