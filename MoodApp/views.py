@@ -5,11 +5,11 @@ from .models import *
 from MoodAppProject import settings
 import os
 import openai
-from dotenv import load_dotenv
-
-
-def configure():
-    load_dotenv()
+# from dotenv import load_dotenv
+#
+#
+# def configure():
+#     load_dotenv()
 
 # Used to generate the random AI image based on the user mood
 def get_AI_image(mode):
