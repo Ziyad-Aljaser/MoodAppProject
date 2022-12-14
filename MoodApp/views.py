@@ -5,24 +5,25 @@ from .models import *
 from MoodAppProject import settings
 import os
 import openai
+from dotenv import load_dotenv
+from pathlib import Path
 
-# Test
-# from dotenv import load_dotenv
-#
-#
-# def configure():
-#     load_dotenv()
+
+dotenv_path = Path('venv/.env')
+load_dotenv(dotenv_path=dotenv_path)
 
 # Used to generate the random AI image based on the user mood
 def get_AI_image(mode):
     # Used to get the hidden API Key
-    openai.api_key_path = "venv/.env"  # api key
+    openai.api_key = os.getenv('API_KEY')  # api key
     test = openai.Image.create(prompt=mode, n=1, size="1024x1024")
     url = str(test["data"][0])[12:-3]
     return url
 
 def index(request):
     template = loader.get_template('MoodAppPage.html')
+    print("Test")
+    print(os.getenv('API_KEY'))
     return HttpResponse(template.render())
 
 def happy(request):
