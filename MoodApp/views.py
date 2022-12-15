@@ -6,6 +6,7 @@ from MoodAppProject import settings
 import os
 import openai
 from dotenv import load_dotenv
+from MoodAppProject import settings
 
 # Used to load env
 load_dotenv()
@@ -13,7 +14,8 @@ load_dotenv()
 # Used to generate the random AI image based on the user mood
 def get_AI_image(mode):
     # Used to get the hidden API Key
-    openai.api_key = os.getenv('API_KEY')  # api key
+    # openai.api_key = os.getenv('API_KEY')  # api key
+    openai.api_key = settings.API_KEY
     test = openai.Image.create(prompt=mode, n=1, size="1024x1024")
     url = str(test["data"][0])[12:-3]
     return url
