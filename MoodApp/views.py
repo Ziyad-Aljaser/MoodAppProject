@@ -6,7 +6,6 @@ from MoodAppProject import settings
 import os
 import openai
 from dotenv import load_dotenv
-from pathlib import Path
 
 # Used to load env
 load_dotenv()
