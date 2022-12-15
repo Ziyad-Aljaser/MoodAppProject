@@ -8,7 +8,7 @@ import openai
 from dotenv import load_dotenv
 from pathlib import Path
 
-
+# Used to load env
 load_dotenv()
 
 # Used to generate the random AI image based on the user mood
